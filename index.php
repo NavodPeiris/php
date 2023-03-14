@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Search</title>
+	<title>Website</title>
 <style type="text/css">
 	table{
 		font-family:arial, sans-serif;
@@ -25,7 +27,6 @@
 
 	}
 
-
 </style>
 
 </head>
@@ -34,15 +35,26 @@
 
 <marquee><h2>Hello!!!! Welcome to our website</h2></marquee>
 
+<h2>choose your option</h2>
 <table>
 	<tr>
-		<th><a href="index.html" >Menu</a></th>
-		<th><a href="ViewAll.html">View All</a></th>
-		<th><a  href="Addrecord.html">Add Record</a></th>
-		<th><a href="Search">Search</a></th>
+		<th><a href="index.php" >Home</a></th>
+		<th><a href="ViewAll.php">View All</a></th>
+		<th><a  href="Addrecord.php">Add Record</a></th>
+		<th><a href="Search.php">Search</a></th>
 	</tr>
 
 </table>
+
+<h3>To see the database you need to login</h3>
+<form>
+	<h2>Username : <input type="text" name="Username"> </h2>
+	<h2>Password :<input type="Password" name="Password"></h2>
+
+</form>
+
+
+
 
 
 </body>

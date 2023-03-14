@@ -73,7 +73,12 @@ input[type=button], input[type=submit], input[type=reset] {
 <h3>Enter your last name : <input type="text" name="last_name"></h3>
 <h3>Date of birth : <input type="text" name="DOB"></h3>
 <h3>Gender : <input type="Radio" name="Gender" value="male">Male <input type="Radio" name="Gender" value="female">female
-	
+<h3>Salary : <input type="text" name="Salary"></h3>
+
+	<br>
+	<br>
+	<input type="submit" name="submit" value="submit">
+	<input type="reset" name="reset" value="reset">
 
 
 

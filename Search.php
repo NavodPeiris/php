@@ -69,6 +69,7 @@ input[type=text]:focus {
 	</select> <input type="text" name="first_name"></h3>
 
 </form>
+<input type="submit" name="Search">
 
 
 </body>

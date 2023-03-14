@@ -1,3 +1,28 @@
+<?php
+
+if (isset($_POST["first_name"]))
+{
+$fname = $_POST["first_name"];
+$mname = $_POST["middle_name"];
+$lname = $_POST["last_name"];
+$dob = $_POST["DOB"];
+$gender = $_POST["Gender"];
+$salary= $_POST["Salary"];
+
+
+$con =mysqli_connect("localhost","user1","123");
+mysqli_select_db($con,"Company");
+$sql = "INSERT INTO members(firstname,middlename,lastname,dob,gender,salary) VALUES ('$fname','$mname','$lname','$dob','$gender','$salary')";
+$ret = mysqli_query($con,$sql);
+
+mysqli_close($con);
+
+echo "<h1><center>Your Data added</center></h1>";
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,13 +91,13 @@ input[type=button], input[type=submit], input[type=reset] {
 <br>
 <br>
 <h2>Fill the form to add details</h2>
-<form>
+<form action="#" method="post">
 
 <h3>Enter your first name : <input type="text" name="first_name"></h3>
 <h3>Enter your middle name : <input type="text" name="middle_name"></h3>
 <h3>Enter your last name : <input type="text" name="last_name"></h3>
-<h3>Date of birth : <input type="text" name="DOB"></h3>
-<h3>Gender : <input type="Radio" name="Gender" value="male">Male <input type="Radio" name="Gender" value="female">female
+<h3>Date of birth : <input type="Date" name="DOB"></h3>
+<h3>Gender : <input type="radio" name="Gender" value="male">Male <input type="radio" name="Gender" value="female">female
 <h3>Salary : <input type="text" name="Salary"></h3>
 
 	<br>
@@ -89,3 +114,8 @@ input[type=button], input[type=submit], input[type=reset] {
 
 </body>
 </html>
+
+
+
+
+

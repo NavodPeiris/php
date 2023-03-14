@@ -1,3 +1,17 @@
+
+<?php
+	include("db_connection.php");
+
+	//write query
+    $sql = 'SELECT * FROM employees';
+    
+    //make query to get data
+    $result = mysqli_query($conn, $sql);
+
+    //detch resulting rows as an array
+    $employees = mysqli_fetch_all($result, MYSQLI_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,6 +60,28 @@
 
 </table>
 
+<h2>All records</h2>
+<table>
+	<tr>
+		<th><p>ID</p></th>
+		<th><p>First_name</p></th>
+		<th><p>Middle_name</p></th>
+		<th><p>Last_name</p></th>
+		<th><p>DOB</p></th>
+		<th><p>Gender</p></th>
+	</tr>
+		<?php foreach($employees as $employee){?>
+			<tr>
+				<td><?php echo $employee['ID']?></td>
+				<td><?php echo $employee['First_name']?></td>
+				<td><?php echo $employee['Middle_name']?></td>
+				<td><?php echo $employee['Last_name']?></td>
+				<td><?php echo $employee['DOB']?></td>
+				<td><?php echo $employee['Gender']?></td>
+			</tr>
+        <?php }?>
+
+</table>
 
 </body>
 </html>

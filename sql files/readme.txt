@@ -1,0 +1,1 @@
+put all these files into xampp/mysql/data folder under "company"
